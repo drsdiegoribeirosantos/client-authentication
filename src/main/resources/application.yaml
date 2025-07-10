@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: clientauthentication
+server:
+  servlet:
+    context-path: /client-authentication
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health
+
