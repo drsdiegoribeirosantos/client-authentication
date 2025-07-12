@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.java.clientauthentication.service.PasswordValidationService;
-import com.java.clientauthentication.service.ValidatorService;
+import com.java.clientauthentication.validation.service.ValidatorService;
 
 @Service
 public class PasswordValidationServiceImpl implements PasswordValidationService {
