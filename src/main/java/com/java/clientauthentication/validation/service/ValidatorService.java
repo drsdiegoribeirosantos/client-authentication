@@ -1,4 +1,4 @@
-package com.java.clientauthentication.service;
+package com.java.clientauthentication.validation.service;
 
 public interface ValidatorService {
 	
