@@ -15,6 +15,8 @@ public class SpecialCharactersValidatorServiceImpl implements ValidatorService {
 
 	@Override
 	public boolean isValid(String password) {
+		
+		if (password == null) return false;
 
 		List<String> repeatedCharacters = new ArrayList<>();
 
