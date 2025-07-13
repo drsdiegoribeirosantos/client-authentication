@@ -4,6 +4,20 @@ Projeto criado com [Spring Initializr](https://start.spring.io/)
 Versão: **Spring Boot 3.5.3**  
 Java: **17**
 
+Localhost para execução:
+
+http://localhost:8080/client-authentication/password-validation?password=L10digtal@
+
+Query Params: password
+Regra: 
+*Nove ou mais caracteres (Não considera espaço como valido)
+*Ao menos 1 dígito
+*Ao menos 1 letra minúscula
+*Ao menos 1 letra maiúscula
+*Ao menos 1 caractere especial
+*Considere como especial os seguintes caracteres: !@#$%^&*()-+
+*Não possuir caracteres repetidos dentro do conjunto
+
 ---
 
 ## 📌 Commits iniciais
@@ -160,3 +174,17 @@ Utilizei o Set para fazer uma coleção(lista) de caracteres especiais do tipo C
 
 Commit: fix: alteração na classe SpecialCharactersValidatorServiceImpl para distribuir a responsabilidade
 Branch: hotfix/special-characters
+
+---
+
+Criação do metodo RepeatedCharacterValidatorServiceImpl para validar se o caracter se repete na senha
+
+
+Utilizo um HashSet e instancio ele para salvar os caracteres do meu laço se caso ele reaparecer no exists já dou um return false pois não é valido, caso não encontre ele irá após completar o foreach dar um return true se não tiver caracter repetidos
+
+OBS.: Identifiquei esse bug quando estava fazendo os testes om base no pedido e vi que estava inconsistente
+
+Commit: fix: Correção do metodo de caracter especial + nova classe de verificação de caracteres repetidos
+Branch: hotfix/repeated-character
+
+
