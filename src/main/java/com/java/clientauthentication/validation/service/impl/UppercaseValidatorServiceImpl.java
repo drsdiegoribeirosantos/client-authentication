@@ -10,6 +10,8 @@ public class UppercaseValidatorServiceImpl implements ValidatorService {
 	@Override
 	public boolean isValid(String password) {
 		
+		if (password == null) return false;
+		
 		for (int i = 0; i < password.length(); i++) {
 			
 	        if (Character.isUpperCase(password.charAt(i))) {
