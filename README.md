@@ -4,6 +4,20 @@ Projeto criado com [Spring Initializr](https://start.spring.io/)
 Versão: **Spring Boot 3.5.3**  
 Java: **17**
 
+Localhost para execução:
+
+http://localhost:8080/client-authentication/password-validation?password=L10digtal@
+
+Query Params: password
+Regra: 
+*Nove ou mais caracteres (Não considera espaço como valido)
+*Ao menos 1 dígito
+*Ao menos 1 letra minúscula
+*Ao menos 1 letra maiúscula
+*Ao menos 1 caractere especial
+*Considere como especial os seguintes caracteres: !@#$%^&*()-+
+*Não possuir caracteres repetidos dentro do conjunto
+
 ---
 
 ## 📌 Commits iniciais
@@ -144,4 +158,33 @@ Branch: feature/readme
 Prompt IA utilizado:
 Request: Formatar a estrutura do README mantendo o conteúdo sem alteração do original
 Response: Estruturação do README neste commit acima
+
+
+---
+
+Implementação dos testes unitários dos validados
+Commit: feat: Teste unitário dos validadores
+Branch: feature/unit-test-validator-methods
+
+---
+
+Bug identificado e que o método SpecialCharactersValidatorServiceImpl não precisa ser responsável por verificar ao menos um caracter e verificar se está repetindo dentro do conjunto vou criar uma nova classe com essa responsabilidade
+
+Utilizei o Set para fazer uma coleção(lista) de caracteres especiais do tipo Character e um foreach para percorrer minha senha e identificar pelo menos um caracter
+
+Commit: fix: alteração na classe SpecialCharactersValidatorServiceImpl para distribuir a responsabilidade
+Branch: hotfix/special-characters
+
+---
+
+Criação do metodo RepeatedCharacterValidatorServiceImpl para validar se o caracter se repete na senha
+
+
+Utilizo um HashSet e instancio ele para salvar os caracteres do meu laço se caso ele reaparecer no exists já dou um return false pois não é valido, caso não encontre ele irá após completar o foreach dar um return true se não tiver caracter repetidos
+
+OBS.: Identifiquei esse bug quando estava fazendo os testes om base no pedido e vi que estava inconsistente
+
+Commit: fix: Correção do metodo de caracter especial + nova classe de verificação de caracteres repetidos
+Branch: hotfix/repeated-character
+
 
