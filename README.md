@@ -145,3 +145,18 @@ Prompt IA utilizado:
 Request: Formatar a estrutura do README mantendo o conteúdo sem alteração do original
 Response: Estruturação do README neste commit acima
 
+
+---
+
+Implementação dos testes unitários dos validados
+Commit: feat: Teste unitário dos validadores
+Branch: feature/unit-test-validator-methods
+
+---
+
+Bug identificado e que o método SpecialCharactersValidatorServiceImpl não precisa ser responsável por verificar ao menos um caracter e verificar se está repetindo dentro do conjunto vou criar uma nova classe com essa responsabilidade
+
+Utilizei o Set para fazer uma coleção(lista) de caracteres especiais do tipo Character e um foreach para percorrer minha senha e identificar pelo menos um caracter
+
+Commit: fix: alteração na classe SpecialCharactersValidatorServiceImpl para distribuir a responsabilidade
+Branch: hotfix/special-characters
