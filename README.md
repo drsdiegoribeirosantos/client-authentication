@@ -65,7 +65,7 @@ Branch: feature/structure
 
 🔧 Implementação dos métodos de validação
 
-CharacterSizeValidatorServiceImpl#isValid()
+####CharacterSizeValidatorServiceImpl#isValid()
 Criada constante ALLOWED_SPECIAL_CHARACTERS com os caracteres permitidos.
 
 Criada variável repeatedCharacters (lista) para:
@@ -82,7 +82,7 @@ O return ocorre após o laço, somente após todas as verificações.
 
 
 
-CharacterSizeValidatorServiceImpl#isValid() (verificação de tamanho)
+####CharacterSizeValidatorServiceImpl#isValid() (verificação de tamanho)
 Primeira verificação: se a senha for null, retorna false de imediato.
 
 Utilizado regex para remover espaços em branco: "\\s".
@@ -98,7 +98,7 @@ Resposta: "\\s"
 
 
 
-NumericDigitValidatorServiceImpl#isValid()
+####NumericDigitValidatorServiceImpl#isValid()
 Inicialmente, pensei em usar um laço com Character.isDigit().
 
 Optei por regex para maior clareza: " .*\\d.* "
@@ -113,7 +113,7 @@ Também valido se o input não é null antes de aplicar o regex.
 
 
 
-LowercaseValidatorServiceImpl#isValid()
+####LowercaseValidatorServiceImpl#isValid()
 Percorre a string com um laço for.
 
 Usa Character.isLowerCase() para verificar se ao menos um caractere é minúsculo.
@@ -123,7 +123,7 @@ Retorna true assim que encontra o primeiro minúsculo.
 
 
 
-UppercaseValidatorServiceImpl#isValid()
+####UppercaseValidatorServiceImpl#isValid()
 Percorre a string com um laço for.
 
 Usa Character.isUpperCase() para verificar se ao menos um caractere é maiúsculo.
